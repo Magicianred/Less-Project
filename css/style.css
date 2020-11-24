@@ -1,8 +1,52 @@
 body {
-  background-color: #f462;
+  background-color: rgba(207, 205, 205, 0.133);
   font-family: "Courier New", Courier, monospace;
 }
 .groupButtons {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px 20px;
+  border-radius: 20px;
+  border: solid 1px black;
+  text-align: center;
+}
+.one {
+  background-color: rgba(207, 205, 205, 0.133);
+  padding: 10px;
+  border-radius: 20px;
+}
+.two {
+  padding: 10px;
+  border-radius: 20px;
+}
+.three {
+  padding: 10px;
+  border-radius: 20px;
+}
+.bordered {
+  border-radius: 20px;
+  border: solid 1px black;
+}
+h1 {
+  margin: 50px 0 50px;
+  border-radius: 20px;
+  border: solid 1px black;
+  text-align: center;
+}
+ul#ulMenu {
+  list-style: none;
+  background-color: #9999ff;
+}
+ul#ulMenu li {
+  font-size: 20px;
+}
+ul#ulMenu li:last-child {
+  color: red;
+}
+ul#ulMenu li:hover {
+  background-color: yellow;
+}
+.kat {
+  height: 300px;
+  width: 300px;
+  background: url("/kat.jpg");
+  background-repeat: no-repeat;
 }

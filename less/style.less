@@ -1,16 +1,79 @@
 // Declaring Variable
 @font-family: "Courier New", Courier, monospace;
-@background-color: #f462;
-@primary-color: #8765u;
+@backgroundColor: rgba(207, 205, 205, 0.133);
+@primary-color: blue;
 @secondary-color: #25417;
 @topAndBottomMargin: 50px;
+@lftAndRgtMargins: 20px;
+@buttonsPadding: 10px;
+@images: "/kat.jpg";
 
+// Assign variable to tags
 body {
-  background-color: @background-color;
+  background-color: @backgroundColor;
   font-family: @font-family;
 }
 
 .groupButtons {
-  margin-top: @topAndBottomMargin;
-  margin-bottom: @topAndBottomMargin;
+  margin: @topAndBottomMargin @lftAndRgtMargins;
+  .bordered;
+  text-align: center;
+}
+
+.one {
+  background-color: @backgroundColor;
+  padding: @buttonsPadding;
+  .border-radius(20px);
+}
+
+.two {
+  padding: @buttonsPadding;
+  .border-radius(20px);
+}
+
+.three {
+  padding: @buttonsPadding;
+  .border-radius(20px);
+}
+
+// Creation of stand-alone classes
+.bordered {
+  border-radius: 20px;
+  border: solid 1px black;
+}
+
+// Applying stand-alone classes
+h1 {
+  margin: @topAndBottomMargin 0 @topAndBottomMargin;
+  .bordered;
+  text-align: center;
+}
+
+// Mixing with parameters - button border-radius
+.border-radius(@radius) {
+  border-radius: @radius;
+}
+
+// Nested style
+ul#ulMenu {
+  list-style: none;
+  background-color: lighten(@primary-color, 30%);
+  li {
+    font-size: 20px;
+  }
+
+  li:last-child {
+    color: red;
+  }
+
+  li:hover {
+    background-color: yellow;
+  }
+}
+
+.kat {
+  height: 300px;
+  width: 300px;
+  background: url(@images);
+  background-repeat: no-repeat;
 }
